@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  line-height: 1.4;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.hero_section {
+  background-image: url(study1.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text_container {
+  color: white;
+  max-width: 900px; /** when the window is smaller than the width of the element (900px) then max-width will not add a horizontal scroll bar to the page but width will*/
+  margin: 0 auto;
+  padding-top: 64px;
+  padding-left: 16px;
+}
+
+.lg_text {
+  font-size: 70px;
+  font-weight: 400;
+}
+
+.work_section {
+  background-color: #1d2628;
+  color: white;
+  text-transform: uppercase;
+  padding: 30px;
+
+  & h2 {
+    font-weight: 100;
+    font-size: 72px;
+    text-align: center;
+  }
+  & h2 span {
+    font-weight: 400;
+    font-size: 96px;
+  }
+}
+
+/*? CARDS STARTS HERE  */
+
+.cards {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 100px;
+}
+.cards .card {
+  max-width: 300px;
+  height: 400px;
+  box-shadow: 1px 4px 5px rgba(1, 1, 1, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+
+  /* & .card:hover {
+    transform: scale(1.04);
+    box-shadow: 1px 4px 5px rgba(1, 1, 1, 0.5);
+  } */
+
+  & .img {
+    height: 150px;
+    overflow: hidden;
+  }
+  & .img1 {
+    background-image: url(study1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  & .img2 {
+    background-image: url(study2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  & .img3 {
+    background-image: url(study3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  & .textarea {
+    padding: 10px;
+    text-align: justify;
+    line-height: 1.56;
+
+    & h4 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+}
+
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 1px 4px 5px rgba(1, 1, 1, 0.5);
+  transition: 0.2s ease-in-out;
+}
+
+.bottom_section {
+  display: flex;
+}
+
+.contact {
+  background-color: #515603;
+}
+.about {
+  background-color: #722300;
+}
+
+.contact,
+.about {
+  color: white;
+  flex: 1;
+  /* max-width: 50%; */
+  min-height: 200px;
+  padding: 32px;
+
+  & h2 {
+    font-size: 60px;
+    font-weight: 300;
+  }
+  & p {
+    margin-bottom: 20px;
+  }
+}
+
+footer {
+  background-color: #1d2628;
+  color: white;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+@media (max-width: 1230px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 914px) {
+  .hero_section {
+    min-height: 80vh;
+  }
+  .text_container {
+    padding: 10px 0;
+  }
+  .lg_text {
+    font-size: 32px;
+  }
+  .work_section h2 {
+    font-size: 24px;
+
+    & span {
+      font-weight: 300;
+      font-size: 32px;
+    }
+  }
+  .bottom_section {
+    flex-direction: column;
+    & .contact,
+    .about {
+      h2 {
+        font-size: 45px;
+      }
+    }
+  }
+  footer {
+    font-size: 13px;
+  }
+}
